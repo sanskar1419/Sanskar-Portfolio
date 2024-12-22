@@ -2,10 +2,13 @@ import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import StarIcon from "@/assets/icons/star.svg";
+import { HeroOrbit } from "@/components/HeroOrbit";
+import SparkleIcon from "@/assets/icons/sparkle.svg";
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0">
+    <div className="py-28 md:py-44 lg:py-56 relative z-0 overflow-x-clip">
       <div
         className="absolute inset-0 -z-30 opacity-5"
         style={{ backgroundImage: `url(${grainImage.src})` }}
@@ -14,6 +17,37 @@ export const HeroSection = () => {
       <div className="size-[900px] hero-ring "></div>
       <div className="size-[1050px] hero-ring "></div>
       <div className="size-[1200px] hero-ring "></div>
+      {/* This is used for the star spinning animation */}
+      <HeroOrbit size={750} rotation={-52}>
+        <StarIcon className="size-28 text-emerald-300" />
+      </HeroOrbit>
+      <HeroOrbit size={580} rotation={20}>
+        <StarIcon className="size-12 text-emerald-300" />
+      </HeroOrbit>
+      <HeroOrbit size={620} rotation={98}>
+        <StarIcon className="size-8 text-emerald-300" />
+      </HeroOrbit>
+      <HeroOrbit size={530} rotation={-14}>
+        <SparkleIcon className="size-8 text-emerald-300/20" />
+      </HeroOrbit>
+      <HeroOrbit size={540} rotation={79}>
+        <SparkleIcon className="size-5 text-emerald-300/20" />
+      </HeroOrbit>
+      <HeroOrbit size={630} rotation={178}>
+        <SparkleIcon className="size-10 text-emerald-300/20" />
+      </HeroOrbit>
+      <HeroOrbit size={810} rotation={144}>
+        <SparkleIcon className="size-14 text-emerald-300/20" />
+      </HeroOrbit>
+      <HeroOrbit size={820} rotation={85}>
+        <div className="size-3 rounded-full text-emerald-300/20" />
+      </HeroOrbit>
+      <HeroOrbit size={620} rotation={-41}>
+        <div className="size-2 rounded-full text-emerald-300/20" />
+      </HeroOrbit>
+      <HeroOrbit size={750} rotation={-5}>
+        <div className="size-2 rounded-full text-emerald-300/20" />
+      </HeroOrbit>
       <div className="container">
         <div className="flex flex-col items-center">
           <Image
